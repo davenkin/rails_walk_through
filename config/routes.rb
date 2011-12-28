@@ -1,5 +1,7 @@
 RailsWalkThrough::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    resource :comments
+  end
 
   get "home/index"
   root :to => "home#index"
